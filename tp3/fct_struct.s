@@ -49,14 +49,14 @@ void modification(int32_t entier, char *p, struct structure_t *ps)
 */
     .globl modification
 /* void modification(int32_t e, char *p, struct structure_t *ps) */
-/*
+/* DEBUT DU CONTEXTE
   Fonction :
     modification : feuille  # sans variables locales
   Contexte :
     e   : registre a0  # argument de type (int32_t)
     p   : registre a1  # argument de type (char *)
     ps  : registre a2  # argument de type (struct structure_t *)
-*/
+FIN DU CONTEXTE */
 modification:
 modification_fin_prologue:
     /* ps->entier = e; */
