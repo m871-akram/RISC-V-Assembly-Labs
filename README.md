@@ -48,9 +48,9 @@ brew install docker colima
 colima start --vm-type=vz --vz-rosetta
 ```
 
-**2. Copy the CEP toolchain from the ENSIMAG server** (~1.5 GB, keep outside the repo):
+**2. Copy the CEP toolchain from the ENSIMAG server** (~1.5 GB, excluded from git):
 ```bash
-scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ ~/riscv32-cep/
+scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ riscv32-cep/
 ```
 
 **3. Build the Docker image** (once):

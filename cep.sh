@@ -7,10 +7,10 @@
 #   ./cep.sh run  tp1 pgcd      — build and run in QEMU
 #   ./cep.sh test tp1           — run verif_etud.sh for a lab
 
-TOOLCHAIN="${CEP_TOOLCHAIN:-$HOME/riscv32-cep}"
-IMAGE="cep-env"
 PROJECT="$(cd "$(dirname "$0")" && pwd)"
-QEMU="$TOOLCHAIN/bin/qemu-system-riscv32"
+TOOLCHAIN="${CEP_TOOLCHAIN:-$PROJECT/riscv32-cep}"
+IMAGE="cep-env"
+QEMU="/matieres/3MMCEP/riscv32/bin/qemu-system-riscv32"
 
 if [ ! -d "$TOOLCHAIN" ]; then
     echo "Toolchain not found at $TOOLCHAIN"
