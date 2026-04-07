@@ -22,8 +22,9 @@ tp2/val_binaire
 .idea/
 .vscode/
 
-## CEP toolchain (1.5GB, not for git)
-#riscv32-cep/
+# CEP toolchain (1.5GB, not for git — hosted on GitHub Releases)
+riscv32-cep/
+riscv32-cep.tar.gz
 
 # OS
 .DS_Store

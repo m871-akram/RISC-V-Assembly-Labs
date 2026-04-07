@@ -48,7 +48,11 @@ brew install docker colima
 colima start --vm-type=vz --vz-rosetta
 ```
 
-**2. Copy the CEP toolchain from the ENSIMAG server** (~1.5 GB, excluded from git):
+**2. Download the CEP toolchain** (~1.5 GB, hosted on [GitHub Releases](https://github.com/m871-akram/Optimized-Algorithms-in-C-x86-Assembly/releases/tag/v1.0-toolchain), excluded from git):
+```bash
+./cep.sh setup
+```
+Or copy manually from the ENSIMAG server:
 ```bash
 scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ riscv32-cep/
 ```

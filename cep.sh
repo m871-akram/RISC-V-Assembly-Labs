@@ -12,10 +12,19 @@ TOOLCHAIN="${CEP_TOOLCHAIN:-$PROJECT/riscv32-cep}"
 IMAGE="cep-env"
 QEMU="/matieres/3MMCEP/riscv32/bin/qemu-system-riscv32"
 
+# Auto-download toolchain from GitHub Releases if missing
+TOOLCHAIN_RELEASE_URL="https://github.com/m871-akram/Optimized-Algorithms-in-C-x86-Assembly/releases/download/v1.0-toolchain/riscv32-cep.tar.gz"
+
 if [ ! -d "$TOOLCHAIN" ]; then
     echo "Toolchain not found at $TOOLCHAIN"
-    echo "Set CEP_TOOLCHAIN or copy it there:"
-    echo "  scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ ~/riscv32-cep/"
+    echo ""
+    echo "Options:"
+    echo "  1) Auto-download from GitHub Releases:"
+    echo "       ./cep.sh setup"
+    echo "  2) Copy manually from ENSIMAG server:"
+    echo "       scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ $TOOLCHAIN"
+    echo "  3) Set a custom path:"
+    echo "       CEP_TOOLCHAIN=/path/to/riscv32 ./cep.sh <command>"
     exit 1
 fi
 
@@ -29,6 +38,11 @@ docker_run() {
 }
 
 case "$1" in
+    setup)
+        echo "Downloading CEP toolchain (~1.5 GB)..."
+        curl -L "$TOOLCHAIN_RELEASE_URL" | tar xz -C "$PROJECT"
+        echo "Toolchain ready at $TOOLCHAIN"
+        ;;
     build)
         docker build --platform linux/amd64 -t "$IMAGE" "$PROJECT"
         ;;
@@ -48,7 +62,8 @@ case "$1" in
         docker_run "$2" bash -c "../common/verif_etud.sh"
         ;;
     *)
-        echo "Usage: $0 {build|shell|make|run|test} [args]"
+        echo "Usage: $0 {setup|build|shell|make|run|test} [args]"
+        echo "  setup              download toolchain from GitHub Releases (~1.5 GB)"
         echo "  build              build the Docker image"
         echo "  shell [tp1]        open a shell (optionally in a lab dir)"
         echo "  make  <tp> <target> build a target (e.g. make tp1 pgcd)"
