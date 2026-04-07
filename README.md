@@ -36,14 +36,64 @@ The project is organized into 5 progressive lab assignments (tp1-tp5), each buil
 - LED and push-button I/O
 - HDMI frame buffer manipulation
 
+## Local Development (macOS / any machine)
+
+The CEP toolchain and QEMU are Linux x86-64 binaries not available via standard package managers. This repo includes a `Dockerfile` and `cep.sh` helper to run the full environment locally via Docker (works on Apple Silicon via Rosetta).
+
+### One-time setup
+
+**1. Install Docker + Colima (macOS):**
+```bash
+brew install docker colima
+colima start --vm-type=vz --vz-rosetta
+```
+
+**2. Copy the CEP toolchain from the ENSIMAG server** (~1.5 GB, keep outside the repo):
+```bash
+scp -r <login>@ensipcetu.ensimag.fr:/matieres/3MMCEP/riscv32/ ~/riscv32-cep/
+```
+
+**3. Build the Docker image** (once):
+```bash
+./cep.sh build
+```
+
+### Daily workflow
+
+```bash
+# Build a specific exercise
+./cep.sh make tp1 pgcd
+
+# Build and run in QEMU
+./cep.sh run tp1 pgcd
+
+# Run all tests for a lab
+./cep.sh test tp1
+
+# Open an interactive shell in a lab
+./cep.sh shell tp1
+```
+
+Inside a shell, the standard commands still work:
+```bash
+make pgcd
+qemu-system-riscv32 -machine cep -nographic -bios none -kernel pgcd
+# Exit QEMU: Ctrl+A then X
+../common/verif_etud.sh
+```
+
+> The toolchain path defaults to `~/riscv32-cep/`. Override with:
+> `CEP_TOOLCHAIN=/other/path ./cep.sh run tp1 pgcd`
+
+---
+
 ##  Quick Start
 
 ### Prerequisites
 
 - **RISC-V Toolchain**: `riscv32-unknown-elf-gcc` (GCC cross-compiler)
-- **QEMU**: `qemu-system-riscv32` (for emulation)
-- **Build Tools**: `make`, `flex`, `bison`
-- **Debugger**: `riscv32-unknown-elf-gdb`
+- **QEMU**: `qemu-system-riscv32` (for emulation, with `-machine cep` support)
+- **Build Tools**: `make`
 
 Set the toolchain path (if not in default location):
 ```bash

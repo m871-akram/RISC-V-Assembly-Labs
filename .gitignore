@@ -1,0 +1,29 @@
+# C/Assembly compilation artifacts
+*.o
+*.out
+*.elf
+
+# Executables (based on project structure)
+tp1/pgcd
+tp1/somme
+tp1/somme8
+tp1/sommeMem
+tp1/mult_egypt
+tp1/mult_native
+tp1/mult_simple
+tp2/age
+tp2/fact
+tp2/hello
+tp2/affine
+tp2/fact_papl
+tp2/val_binaire
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Test outputs
+tp*/test/
