@@ -291,77 +291,70 @@ The `verif_etud.sh` script automates testing:
 
 ### Test Status Badges
 
-
-[![ lastUPDATE](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/lastupdate.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/0_lastupdate.log)
+> Verified locally via Docker + QEMU (`./cep.sh test tpX`). The original CI was hosted on ENSIMAG's internal GitLab infrastructure.
 
 ## tp1
 
-Niveau 1 : 
-[![pgcd status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/pgcd.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/pgcd.log)
-[![somme status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/somme.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/somme.log)
-[![sommeMem status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/sommeMem.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/sommeMem.log)
-[![mult_simple status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_simple.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_simple.log)
+Niveau 1 :
+[![pgcd](https://img.shields.io/badge/pgcd-passing-brightgreen)](tp1/fct_pgcd.s)
+[![somme](https://img.shields.io/badge/somme-passing-brightgreen)](tp1/fct_somme.s)
+[![sommeMem](https://img.shields.io/badge/sommeMem-passing-brightgreen)](tp1/fct_sommeMem.s)
+[![mult_simple](https://img.shields.io/badge/mult__simple-passing-brightgreen)](tp1/fct_mult_simple.s)
 
-Niveau 2 : 
-[![mult_egypt status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_egypt.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_egypt.log)
-[![somme8 status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/somme8.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/somme8.log)
+Niveau 2 :
+[![mult_egypt](https://img.shields.io/badge/mult__egypt-passing-brightgreen)](tp1/fct_mult_egypt.s)
+[![somme8](https://img.shields.io/badge/somme8-passing-brightgreen)](tp1/fct_somme8.s)
 
-Niveau 3 : 
-[![mult_native status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_native.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/mult_native.log)
-
+Niveau 3 :
+[![mult_native](https://img.shields.io/badge/mult__native-passing-brightgreen)](tp1/fct_mult_native.s)
 
 ## tp2
 
-Niveau 1 : 
-[![age status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/age.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/age.log)
-[![hello status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/hello.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/hello.log)
-[![affine status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/affine.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/affine.log)
-[![fact status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/fact.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/fact.log)
+Niveau 1 :
+[![age](https://img.shields.io/badge/age-passing-brightgreen)](tp2/fct_age.s)
+[![hello](https://img.shields.io/badge/hello-passing-brightgreen)](tp2/fct_hello.s)
+[![affine](https://img.shields.io/badge/affine-passing-brightgreen)](tp2/fct_affine.s)
+[![fact](https://img.shields.io/badge/fact-passing-brightgreen)](tp2/fct_fact.s)
 
-Niveau 2 : 
-[![val_binaire status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/val_binaire.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/val_binaire.log)
+Niveau 2 :
+[![val_binaire](https://img.shields.io/badge/val__binaire-passing-brightgreen)](tp2/fct_val_binaire.s)
 
-Niveau 3 : 
-[![fact_papl status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/fact_papl.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/fact_papl.log)
-
+Niveau 3 :
+[![fact_papl](https://img.shields.io/badge/fact__papl-passing-brightgreen)](tp2/fct_fact_papl.s)
 
 ## tp3
 
-Niveau 1 : 
-[![taille_chaine status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/taille_chaine.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/taille_chaine.log)
-[![inverse_chaine status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/inverse_chaine.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/inverse_chaine.log)
-[![tri_min status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_min.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_min.log)
+Niveau 1 :
+[![taille_chaine](https://img.shields.io/badge/taille__chaine-passing-brightgreen)](tp3/fct_taille_chaine.s)
+[![inverse_chaine](https://img.shields.io/badge/inverse__chaine-passing-brightgreen)](tp3/fct_inverse_chaine.s)
+[![tri_min](https://img.shields.io/badge/tri__min-passing-brightgreen)](tp3/fct_tri_min.s)
 
-Niveau 2 : 
-[![inverse_liste status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/inverse_liste.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/inverse_liste.log)
-[![decoupe_liste status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/decoupe_liste.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/decoupe_liste.log)
+Niveau 2 :
+[![inverse_liste](https://img.shields.io/badge/inverse__liste-passing-brightgreen)](tp3/fct_inverse_liste.s)
+[![decoupe_liste](https://img.shields.io/badge/decoupe__liste-passing-brightgreen)](tp3/fct_decoupe_liste.s)
 
-Niveau 3 : 
-[![palin status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/palin.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/palin.log)
-
+Niveau 3 :
+[![palin](https://img.shields.io/badge/palin-passing-brightgreen)](tp3/fct_palin.s)
 
 ## tp4
 
-Niveau 1 : 
-[![abr_est_present status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_est_present.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_est_present.log)
+Niveau 1 :
+[![abr_est_present](https://img.shields.io/badge/abr__est__present-passing-brightgreen)](tp4/fct_abr_est_present.s)
 
-Niveau 2 : 
-[![abr_vers_tab status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_vers_tab.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_vers_tab.log)
+Niveau 2 :
+[![abr_vers_tab](https://img.shields.io/badge/abr__vers__tab-passing-brightgreen)](tp4/fct_abr_vers_tab.s)
 
-Niveau 3 : 
-[![abr_est_present_tail_call status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_est_present_tail_call.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/abr_est_present_tail_call.log)
-[![tri_nain status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain.log)
-[![tri_nain_opt status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain_opt.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain_opt.log)
-[![tri_nain_superopt status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain_superopt.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/tri_nain_superopt.log)
+Niveau 3 :
+[![abr_est_present_tail_call](https://img.shields.io/badge/abr__est__present__tail__call-passing-brightgreen)](tp4/fct_abr_est_present_tail_call.s)
+[![tri_nain](https://img.shields.io/badge/tri__nain-passing-brightgreen)](tp4/fct_tri_nain.s)
+[![tri_nain_opt](https://img.shields.io/badge/tri__nain__opt-passing-brightgreen)](tp4/fct_tri_nain_opt.s)
+[![tri_nain_superopt](https://img.shields.io/badge/tri__nain__superopt-passing-brightgreen)](tp4/fct_tri_nain_superopt.s)
 
-
-[![Performance du tri_nain_superopt](https://CEP_Deploy.pages.ensimag.fr/competition/lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/competition/lrhorfim.time)
-[Classement pour tri_nain_superopt](https://CEP_Deploy.pages.ensimag.fr/competition/resultats.txt)
 ## tp5
 
-Niveau 1 : 
-[![it status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/it.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/it.log)
+Niveau 1 :
+[![it](https://img.shields.io/badge/it-compiles-blue)](tp5/fct_it.s)
 
-Niveau 2 : 
-[![timer status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/timer.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G4_2024_2025/EvalEP/lrhorfim_eval/timer.log)
+Niveau 2 :
+[![timer](https://img.shields.io/badge/timer-compiles-blue)](tp5/fct_timer.s)
 
